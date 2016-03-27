@@ -1,0 +1,23 @@
+<h2>Categories</h2>
+<!--<p>The .table-hover class enables a hover state on table rows:</p>-->
+
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="cur-poin" ng-click="showcategoryInDetail(category)" ng-repeat="category in categories.records">
+        <td>{{category.categoryName}}</td>
+        <td>{{category.description|limitTo:20}}
+            {{category.description.length > 20 ? '...' : ''}}
+            {{!category.description&&'N/A'||''}}
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+<!--</table>"bigTotalItems" ng-change="pageChanged()" items-per-page="pageSize" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages"></pagination>-->

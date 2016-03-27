@@ -1,0 +1,91 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>@title</title>
+        @*<link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">*@
+
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/bootstrap.min.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/select2.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/sb-admin.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("font-awesome/css/font-awesome.min.css")">
+
+            <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+            <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+            <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+        @*<script src="@routes.Assets.versioned("javascripts/lib/jquery.js")" type="text/javascript"></script>*@
+        <script src="@routes.Assets.versioned("javascripts/lib/jquery.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/lib/bootstrap.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/hello.js")" type="text/javascript"></script>
+
+
+        <script src="@routes.Assets.versioned("javascripts/lib/angular.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/lib/angular-resource.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/lib/angular-ui-router.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/lib/restangular.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/lib/ui-bootstrap-tpls.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/lib/select2.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/lib/ui-select2.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/lib/underscore.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/lib/underscore.string.min.js")" type="text/javascript"></script>
+
+        <script src="@routes.Assets.versioned("javascripts/customScripts/app.js")" type="text/javascript"></script>
+
+        <script src="@routes.Assets.versioned("javascripts/customScripts/controllers/CategoriesController.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/customScripts/controllers/CategoryRootController.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/customScripts/controllers/CategoryDetailController.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/customScripts/controllers/CategoryAddController.js")" type="text/javascript"></script>
+
+        <script src="@routes.Assets.versioned("javascripts/customScripts/controllers/SignInController.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/customScripts/controllers/SignUpController.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/customScripts/controllers/UsersController.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/customScripts/controllers/ProductsController.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/customScripts/controllers/SupplierAddController.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/customScripts/controllers/SuppliersController.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/customScripts/controllers/SuppliersRootController.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/customScripts/controllers/SupplierDetailController.js")" type="text/javascript"></script>
+
+        <script src="@routes.Assets.versioned("javascripts/customScripts/controllers/ProductRootController.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/customScripts/controllers/ProductAddController.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/customScripts/controllers/ProductDetailController.js")" type="text/javascript"></script>
+
+        <script src="@routes.Assets.versioned("javascripts/customScripts/controllers/ProductStatusRootController.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/customScripts/controllers/ProductStatusController.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/customScripts/controllers/ProductStatusAddController.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/customScripts/controllers/ProductStatusDetailController.js")" type="text/javascript"></script>
+
+        <script src="@routes.Assets.versioned("javascripts/customScripts/controllers/ProductRequestController.js")" type="text/javascript"></script>
+
+
+        <script src="@routes.Assets.versioned("javascripts/customScripts/controllers/InventoryMgmntRootController.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/customScripts/services/Authenticate.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/customScripts/services/Product.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/customScripts/services/Supplier.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/customScripts/services/User.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/customScripts/services/Category.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/customScripts/services/Productstatus.js")" type="text/javascript"></script>
+
+        <style type="text/css">
+            textarea{
+                height: 105px !important;
+            }
+        </style>
+
+    </head>
+    <body ng-cloak ng-controller="InventoryMgmntRootCtrl" ng-app="invMgmt">
+    @content
+    </body>
+</html>

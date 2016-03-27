@@ -1,0 +1,32 @@
+<h2>Suppliers</h2>
+<!--<p>The .table-hover class enables a hover state on table rows:</p>-->
+<!--<div class="row">-->
+    <!--<div class="col-md-3">-->
+            <!--<div class="input-group">-->
+                <!--&lt;!&ndash; USE TWITTER TYPEAHEAD JSON WITH API TO SEARCH &ndash;&gt;-->
+                <!--<input class="form-control" id="system-search" name="q" placeholder="Search for" ng-change="loadProducts()" ng-model="search">-->
+                    <!--<span class="input-group-btn">-->
+                        <!--<button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>-->
+                    <!--</span>-->
+            <!--</div>-->
+
+    <!--</div>-->
+<!--</div>-->
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Contact Name</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="cur-poin" ng-click="showsupplierInDetail(supplier)" ng-repeat="supplier in suppliers.records">
+        <td>{{supplier.companyName}}</td>
+        <td>{{supplier.contactName&&supplier.contactName||'N/A'}}</td>
+    </tr>
+
+    </tbody>
+</table>
+
+<!--<pagination total-items="bigTotalItems" ng-change="pageChanged()" items-per-page="pageSize" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages"></pagination>-->

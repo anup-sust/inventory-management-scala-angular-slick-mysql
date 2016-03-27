@@ -1,0 +1,114 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET           /                                               controllers.Application.index
+
+GET           /signin                                         controllers.Application.index
+
+GET           /signup                                         controllers.Application.index
+
+GET           /logout                                         controllers.UserController.logout
+
+GET           /users                                          controllers.Application.index
+
+GET           /products                                       controllers.Application.index
+
+GET           /product-status                                 controllers.Application.index
+
+GET           /suppliers                                      controllers.Application.index
+
+GET           /suppliers/new                                  controllers.Application.index
+
+GET           /suppliers/:id                                  controllers.Application.index2(id:Int)
+
+GET           /categories                                     controllers.Application.index
+
+GET           /categories/new                                 controllers.Application.index
+
+GET           /categories/:id                                 controllers.Application.index2(id:Int)
+
+GET           /products/new                                   controllers.Application.index
+
+GET           /products/:id                                   controllers.Application.index2(id:Int)
+
+GET           /requests                                       controllers.Application.index
+
+GET           /api/user                                       controllers.UserController.getAllUsers
+
+GET           /api/user/detail                                controllers.UserController.getAllUsersDetail
+
+GET           /api/user/roles                                 controllers.UserRoleController.getAllUserRoles
+
+#POST         /api/user/availability        controllers.UserController.checkAvailability
+
+PUT           /api/user                                       controllers.UserController.updateUser
+
+POST          /api/user/signup                                controllers.UserController.signup
+
+#POST        /api/user                    controllers.UserController.getAllUsers
+
+POST          /api/login                                      controllers.UserController.login
+
+POST          /api/authenticate                               controllers.UserController.authenticate2
+
+GET           /api/product                                    controllers.ProductController.getAllProducts
+
+POST          /api/product                                    controllers.ProductController.addProduct
+
+PUT           /api/product                                    controllers.ProductController.updateProduct
+
+GET           /api/product/details                            controllers.ProductController.getAllProductsDetail
+
+
+GET           /api/product/request                            controllers.ProductRequestController.getAllProductsRequest
+
+POST          /api/product/request                            controllers.ProductRequestController.addProductRequest
+
+PUT           /api/product/request                            controllers.ProductRequestController.updateProductRequest
+
+GET           /api/product/request/details                    controllers.ProductRequestController.getAllProductsRequestDetail
+
+GET           /api/product/request/details/product/:id        controllers.ProductRequestController.getProductRequestDetailByProductId(id: Int)
+
+DELETE        /api/product/request/:id                        controllers.ProductRequestController.deleteProductRequest(id: Int)
+
+GET           /api/product/:id                                controllers.ProductController.getProductById(id: Int)
+
+DELETE        /api/product/:id                                controllers.ProductController.deleteProduct(id: Int)
+
+GET           /api/supplier                                   controllers.Application.getSuppliers
+
+GET           /api/supplier/:id                               controllers.Application.getSupplierById(id:Int)
+
+POST          /api/supplier                                   controllers.Application.addSupplier
+
+PUT           /api/supplier                                   controllers.Application.updateSupplier
+
+DELETE        /api/supplier/:id                               controllers.Application.deleteSupplier(id:Int)
+
+GET           /api/category                                   controllers.Application.getCategories
+
+GET           /api/category/:id                               controllers.Application.getCategoryById(id:Int)
+
+POST          /api/category                                   controllers.Application.addCategory
+
+PUT           /api/category                                   controllers.Application.updateCategory
+
+DELETE        /api/category/:id                               controllers.Application.deleteCategory(id: Int)
+
+GET           /api/productstatus                              controllers.Application.getProductStatus
+
+GET           /api/productstatus/:id                          controllers.Application.getProductStatusById(id:Int)
+
+POST          /api/productstatus                              controllers.Application.addProductStatus
+
+PUT           /api/productstatus                              controllers.Application.updateProductStatus
+
+DELETE        /api/productstatus/:id                          controllers.Application.deleteProductStatus(id: Int)
+
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET           /assets/*file                                   controllers.Assets.versioned(path="/public", file: Asset)

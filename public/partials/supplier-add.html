@@ -1,0 +1,56 @@
+
+<div class="panel panel-info col-lg-8">
+    <div class="panel-heading">{{selectedSupplier.companyName||'Name is required'}}</div>
+    <div class="panel-body">
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label  class="col-sm-3 control-label">Supplier Name:</label>
+                <div class="col-sm-9">
+                    <input ng-model="selectedSupplier.companyName"  class="form-control" id="inputEmail1" placeholder="Name">
+                    <!--<p class="help-block">Lorem ipsum dolor sit amet</p>-->
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Contact Name:</label>
+                <div class="col-sm-9">
+                    <input ng-model="selectedSupplier.contactName"  class="form-control" id="inputEmail5" placeholder="contact">
+                    <!--<p class="help-block">Lorem ipsum dolor sit amet</p>-->
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label  class="col-sm-3 control-label">Address:</label>
+                <div class="col-sm-9">
+                    <textarea ng-model="selectedSupplier.address"  class="form-control" id="inputEmail5" placeholder="address" />
+                    <!--<p class="help-block">Lorem ipsum dolor sit amet</p>-->
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Phone:</label>
+                <div class="col-sm-9">
+                    <input ng-model="selectedSupplier.phone" class="form-control" id="inputEmail5" placeholder="Phone">
+                    <!--<p class="help-block">Lorem ipsum dolor sit amet</p>-->
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label  class="col-sm-3 control-label">About:</label>
+                <div class="col-sm-9">
+                    <textarea ng-model="selectedSupplier.city" class="form-control" id="inputEmail5" placeholder="About" />
+                    <!--<p class="help-block">Lorem ipsum dolor sit amet</p>-->
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-xs-12">
+            <button ng-disabled="!selectedSupplier.companyName" type="submit" ng-click="add()" class="btn btn-positive pull-right">Add</button>
+            <a class="pull-right cancel-btn" href="/suppliers">Cancel</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>

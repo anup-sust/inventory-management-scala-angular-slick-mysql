@@ -1,0 +1,52 @@
+<h2>Products {{bigCurrentPage}}</h2>
+<!--<p>The .table-hover class enables a hover state on table rows:</p>-->
+<div class="row">
+    <div class="col-md-3">
+        <div class="input-group">
+            <!-- USE TWITTER TYPEAHEAD JSON WITH API TO SEARCH -->
+            <input class="form-control" id="system-search" name="q" placeholder="Search for" ng-change="loadProducts()"
+                   ng-model="search">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+        </div>
+
+    </div>
+</div>
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>Product Name</th>
+        <th>Supplier</th>
+        <th>Category</th>
+        <th>Status</th>
+        <th ng-if="Admin||SuparAdmin">Quantity</th>
+        <th ng-if="Admin||SuparAdmin">Unit Price</th>
+        <th ng-if="Admin||SuparAdmin">Units In Stock</th>
+        <th ng-if="Admin||SuparAdmin">Units On Order</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr  ng-repeat="product in productsDetails.records">
+        <td>{{product.productName}}</td>
+        <td>{{product.supplier||'N/A'}}</td>
+        <td>{{product.category}}</td>
+        <td>{{product.prodtStatus}}</td>
+        <td ng-if="Admin||SuparAdmin">{{ product.quantityPerUnit || 'N/A'}}</td>
+        <td ng-if="Admin||SuparAdmin">{{ product.unitPrice || 'N/A'}}</td>
+        <td ng-if="Admin||SuparAdmin">{{ product.unitsInStock || 'N/A'}}</td>
+        <td ng-if="Admin||SuparAdmin">{{ product.unitsOnOrder || 'N/A' }}</td>
+        <td class="cur-poin"  ng-click="showProductInDetail(product)"><a>Show details</a></td>
+
+    </tr>
+
+    </tbody>
+</table>
+
+<span ng-if="bigTotalItems">
+    <pagination total-items="bigTotalItems" ng-change="pageChanged()" items-per-page="pageSize" ng-model="big.CurrentPage"
+                max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false"
+                num-pages="numPages"></pagination>
+</span>

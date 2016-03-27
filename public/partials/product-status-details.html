@@ -1,0 +1,38 @@
+<div class="panel panel-info col-lg-8">
+    <div class="panel-heading">{{selectedProductstatus.StatusName}}</div>
+    <div class="panel-body">
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Status:</label>
+
+                <div class="col-sm-9">
+                    <input ng-model="selectedProductstatus.StatusName" class="form-control" id="inputEmail1"
+                           placeholder="N/A">
+                    <!--<p class="help-block">Lorem ipsum dolor sit amet</p>-->
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Description:</label>
+
+                <div class="col-sm-9">
+                    <textarea ng-model="selectedProductstatus.description" class="form-control" id="inputEmail5"
+                              placeholder="N/A"/>
+                    <!--<p class="help-block">Lorem ipsum dolor sit amet</p>-->
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-xs-12">
+                    <button ng-if="SuparAdmin" type="submit" ng-click="delete(selectedProductstatus)"
+                            class="btn btn-remove pull-left">Remove
+                    </button>
+                    <button type="submit" ng-click="save()" class="pull-right btn btn-positive">Save</button>
+                    <a class="pull-right cancel-btn" href="/product-status">Cancel</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
